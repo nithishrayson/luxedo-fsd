@@ -1,0 +1,21 @@
+.new-arrivals {
+  background-color: #ffffff;
+  margin-top: 90px;
+}
+
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-img {
+  max-height: 180px;
+  object-fit: contain;
+}
+.wide-btn{
+    width: 150px;
+    height: 40px;
+}

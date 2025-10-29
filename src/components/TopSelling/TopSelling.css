@@ -1,0 +1,26 @@
+.top-selling{
+  background-color: #ffffff;
+  margin: 30px;
+}
+
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.product-img {
+  max-height: 300px;
+  object-fit: contain;
+  width: 100vw;
+  background-color: rgb(225, 222, 222);
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+.product-img:hover{
+  transform: translateY(-4px);
+}
+
+
+.wide-btn{
+    width: 150px;
+    height: 40px;
+}

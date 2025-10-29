@@ -1,0 +1,23 @@
+.hero-section {
+  height: 80vh;
+}
+
+.hero-image {
+  max-height: 550px;
+  object-fit: contain;
+}
+
+.small-btn {
+  padding: 6px 16px;       
+  font-size: 0.875rem;       
+  width: fit-content;       
+  min-width: 140px;          
+}
+
+.stats-row{
+    margin-top: 25px;
+}
+.button-combo{
+    margin-top: 20px;
+}
+
