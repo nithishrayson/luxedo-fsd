@@ -1,21 +1,36 @@
-.new-arrivals {
-  background-color: #ffffff;
-  margin-top: 90px;
+.new-arrivals{
+  margin-top: 50px;
 }
 
 .product-card {
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.1);
+}
+
+/* Uniform image height */
+.product-image-container {
+  height: 200px;
+  overflow: hidden;
+}
+.product-img {
+  max-height: 100%;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
-
-.product-card:hover {
-  transform: translateY(-4px);
+.product-card:hover .product-img {
+  transform: scale(1.05);
 }
 
-.product-img {
-  max-height: 180px;
-  object-fit: contain;
+.discount-badge {
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
 }
-.wide-btn{
-    width: 150px;
-    height: 40px;
+
+.small-btn {
+  font-size: 0.85rem;
 }

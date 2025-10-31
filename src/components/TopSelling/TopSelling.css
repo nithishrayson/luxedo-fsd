@@ -1,26 +1,35 @@
-.top-selling{
-  background-color: #ffffff;
-  margin: 30px;
-}
-
 .product-card {
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.1);
 }
 
+/* Uniform image area */
+.product-image-container {
+  height: 200px;
+  overflow: hidden;
+}
 .product-img {
-  max-height: 300px;
+  max-height: 100%;
   object-fit: contain;
-  width: 100vw;
-  background-color: rgb(225, 222, 222);
-  border-radius: 15px;
   transition: transform 0.3s ease;
 }
-.product-img:hover{
-  transform: translateY(-4px);
+.product-card:hover .product-img {
+  transform: scale(1.05);
 }
 
-
-.wide-btn{
-    width: 150px;
-    height: 40px;
+/* Discount badge */
+.discount-badge {
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
 }
+
+/* Button sizing */
+.small-btn {
+  font-size: 0.85rem;
+}
+

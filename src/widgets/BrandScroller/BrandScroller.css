@@ -1,6 +1,7 @@
 .brand-scroller-wrapper {
   overflow: hidden;
   position: relative;
+  margin-top: 10px;
 }
 
 .brand-scroller-track {

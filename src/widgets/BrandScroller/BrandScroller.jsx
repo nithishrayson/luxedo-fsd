@@ -14,7 +14,7 @@ const BrandScroller = () => {
   const repeatedLogos = Array(10).fill(brandLogos).flat();
 
   return (
-    <div className="brand-scroller-wrapper border-top py-3 bg-white">
+    <div className="brand-scroller-wrapper py-3 bg-white">
       <div className="brand-scroller-track">
         {repeatedLogos.map((logo, idx) => (
           <div key={idx} className="brand-logo">
