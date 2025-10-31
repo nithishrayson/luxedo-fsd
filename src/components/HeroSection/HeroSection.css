@@ -1,23 +1,143 @@
+/* ------------------- HERO SECTION ------------------- */
 .hero-section {
-  height: 80vh;
+  margin-top: 10vh;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
 }
 
-.hero-image {
-  max-height: 550px;
-  object-fit: contain;
+/* ------------------- HERO CONTENT ------------------- */
+.hero-title {
+  font-size: 2.75rem;
+  /* Increased for bold impact */
+  line-height: 1.2;
+  color: #111;
+  letter-spacing: 0.5px;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  /* Slightly larger paragraph text */
+  line-height: 1.7;
+  color: #555;
+  max-width: 95%;
+}
+
+.button-combo {
+  margin-top: 24px;
 }
 
 .small-btn {
-  padding: 6px 16px;       
-  font-size: 0.875rem;       
-  width: fit-content;       
-  min-width: 140px;          
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  width: fit-content;
+  min-width: 140px;
 }
 
-.stats-row{
-    margin-top: 25px;
+.stats-row {
+  margin-top: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-.button-combo{
+
+.stat-item {
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 2px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* ------------------- HERO IMAGE ------------------- */
+.hero-image {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 991px) {
+  .hero-section {
+    height: auto;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .stats-row {
+    justify-content: center;
     margin-top: 20px;
+  }
+
+  .stat-item {
+    padding: 0 10px;
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+    /* Hide vertical lines on mobile */
+  }
+
+  .hero-image {
+    max-width: 80%;
+    margin-top: 1rem;
+  }
 }
 
+@media (max-width: 575px) {
+  .hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-image {
+    width: 45vw;
+    height: 50vh;
+    position: relative;
+    top: -10vh;
+  }
+}

@@ -1,0 +1,92 @@
+.homepage-wrapper {
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+/* Section spacing */
+.section-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.section-divider {
+  width: 80%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0 auto;
+}
+
+/* Light backgrounds for brand + reviews sections */
+.brand-section,
+.reviews-section {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+/* ✅ RESPONSIVE STYLES */
+@media (max-width: 992px) {
+  /* Tablet */
+  .section-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .brand-section,
+  .reviews-section {
+    padding: 30px 15px;
+  }
+
+  .section-divider {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Small tablet / large mobile */
+  .section-wrapper {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 1.6rem !important;
+    text-align: center;
+  }
+
+  .brand-section,
+  .reviews-section {
+    padding: 25px 10px;
+  }
+
+  .section-divider {
+    width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Mobile */
+  .section-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .brand-section,
+  .reviews-section {
+    border-radius: 8px;
+    padding: 20px 8px;
+  }
+
+  .section-divider {
+    width: 100%;
+  }
+}

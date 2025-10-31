@@ -1,45 +1,80 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa';
-import "./Header.css"
+import './Header.css';
+import logo from '../../assets/logos/logo.png';
+import { useCart } from '../../context/CartContext';
 
 const Header = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+
+    const { cartCount } = useCart();
+
     return (
-        <nav className="navbar navbar-expand-lg bg-white border-bottom py-3 px-4">
-            <div className="container-fluid d-flex justify-content-between align-items-center">
+        <nav className="header navbar navbar-expand-lg bg-white shadow-sm py-3 px-3 px-md-5">
+            <div className="container-fluid">
+                {/* Logo */}
+                <a className="navbar-brand d-flex align-items-center" href="/">
+                    <img
+                        src={logo}
+                        alt="Luxedo Logo"
+                        className="logo-img"
+                        height="40"
+                    />
+                </a>
 
-                <div className="navbar-brand fw-bold fs-4">LUXEDO</div>
+                {/* Hamburger Menu Button */}
+                <button
+                    className="navbar-toggler border-0"
+                    type="button"
+                    onClick={toggleMenu}
+                    aria-expanded={menuOpen}
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-                <div className="d-none d-lg-flex flex-grow-1 justify-content-center align-items-center gap-4">
-                    <ul className="navbar-nav flex-row gap-4">
-                        <li className="nav-item"><a className="nav-link" href="/shop">Shop</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/on-sale">On Sale</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/new-arrivals">New Arrivals</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/brands">Brands</a></li>
+                {/* Collapsible Nav Links */}
+                <div className={`navbar-collapse ${menuOpen ? 'show' : ''}`} id="navbarContent">
+                    <ul className="navbar-nav d-flex flex-row justify-content-center align-items-center gap-4 mb-3 mb-lg-0">
+                        <li className="nav-item">
+                            <a className="nav-link fw-semibold" href="/shop">Shop</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link fw-semibold" href="/on-sale">On Sale</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link fw-semibold" href="/new-arrivals">New Arrivals</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link fw-semibold" href="/brands">Brands</a>
+                        </li>
                     </ul>
 
-                    <div className="ms-4">
-                        <div
-                            className="input-group rounded-pill overflow-hidden"
-                            style={{ minWidth: '450px', background: '#d3d3d3' }}
-                        >
-                            <span className="input-group-text bg-white border-0">
-                                <FaSearch size={16} />
-                            </span>
-                            <input
-                                type="text"
-                                className="form-control border-0"
-                                placeholder="Search for products..."
-                                aria-label="Search"
-                            />
-                        </div>
-                    </div>
-
+                    {/* Search Bar */}
+                    <form className="d-flex search-bar mx-lg-4 mt-3 mt-lg-0">
+                        <span className="search-icon">
+                            <FaSearch size={16} />
+                        </span>
+                        <input
+                            className="form-control border-0 shadow-none"
+                            type="search"
+                            placeholder="Search..."
+                            aria-label="Search"
+                        />
+                    </form>
                 </div>
 
-                {/* Right: Icons */}
-                <div className="d-flex gap-3">
-                    <FaShoppingCart size={20} />
-                    <FaUser size={20} />
+                {/* Right Icons */}
+                <div className="d-flex align-items-center gap-3 ms-auto position-relative">
+                    {/* Cart Icon with Count */}
+                    <div className="cart-container">
+                        <FaShoppingCart size={24} />
+                        {cartCount > 0 && <span className="cart-bubble">{cartCount}</span>}
+                    </div>
+
+                    {/* User Icon */}
+                    <FaUser className="header-icon" size={20} />
                 </div>
             </div>
         </nav>

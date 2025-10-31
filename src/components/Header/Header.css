@@ -1,0 +1,260 @@
+/* =======================
+   HEADER BASE STYLES
+======================= */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* =======================
+   BRAND + LINKS
+======================= */
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  color: #000 !important;
+}
+
+.nav-link {
+  color: #555 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #000 !important;
+}
+
+/* =======================
+   SEARCH BAR
+======================= */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 25px;
+  padding: 5px 12px;
+  width: 240px;
+  transition: all 0.3s ease;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  margin-right: 8px;
+  color: #888;
+}
+
+/* =======================
+   HEADER ICONS
+======================= */
+.header-icon {
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.header-icon:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* =======================
+   TOGGLER
+======================= */
+.navbar-toggler {
+  background: none;
+  border: none;
+  color: #000;
+  outline: none;
+}
+.cart-badge {
+  font-size: 0.7rem;
+  padding: 4px 6px;
+  min-width: 18px;
+  min-height: 18px;
+  text-align: center;   
+  color: #fff;
+}
+
+
+/* =======================
+   COLLAPSE MENU
+======================= */
+.navbar-collapse {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  padding: 20px 0;
+  z-index: 999;
+  border-top: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.navbar-collapse.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =======================
+   COLLAPSE MENU LINKS
+======================= */
+.navbar-collapse ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navbar-collapse .nav-item {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.navbar-collapse .nav-link {
+  display: block;
+  width: 100%;
+  color: #555 !important;
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.navbar-collapse .nav-link:hover {
+  color: #000 !important;
+  background-color: #f7f7f7;
+}
+.navbar-brand .logo-img {
+  height: 35px;          /* adjust size */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand .logo-img:hover {
+  transform: scale(1.05);
+}
+.cart-container {
+  position: relative; /* Ensures bubble positions relative to this */
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cart-container svg {
+  font-size: 24px;
+  color: #000;
+}
+
+/* Bubble styling */
+.cart-bubble {
+  position: absolute;
+  top: -8px;    
+  right: -8px;  
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+}
+
+
+/* =======================
+   DESKTOP VIEW
+======================= */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    padding: 0;
+  }
+
+  .navbar-collapse ul {
+    flex-direction: row;
+  }
+
+  .navbar-collapse .nav-item {
+    padding: 0;
+    text-align: left;
+  }
+
+  .search-bar {
+    width: 260px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px; 
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+    color: #555 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #000 !important;
+  }
+
+  .navbar .container-fluid {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 40px; 
+  }
+
+  .navbar-brand {
+    margin-right: 30px;
+  }
+
+  .search-bar {
+    margin-left: 30px;
+  }
+}
