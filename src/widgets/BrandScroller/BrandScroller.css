@@ -21,7 +21,7 @@
 }
 
 .brand-logo img {
-  width: 120px;
+  width: 90px;
   height: auto;
   object-fit: contain;
   display: block;
@@ -41,7 +41,6 @@
   }
 }
 
-/* ✅ TABLET VIEW (below 992px) */
 @media (max-width: 992px) {
   .brand-logo {
     width: 140px;
@@ -54,7 +53,6 @@
   }
 }
 
-/* ✅ MOBILE VIEW (below 576px) */
 @media (max-width: 576px) {
   .brand-scroller-wrapper {
     margin-top: 1.5rem;

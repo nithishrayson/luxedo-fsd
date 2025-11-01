@@ -1,260 +1,155 @@
-/* =======================
-   HEADER BASE STYLES
-======================= */
-.header {
-  position: fixed;
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 12px 24px;
+  position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #fff;
-  transition: all 0.3s ease;
-  width: 100%;
 }
 
-/* =======================
-   BRAND + LINKS
-======================= */
-.navbar-brand {
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 1px;
-  color: #000 !important;
-}
-
-.nav-link {
-  color: #555 !important;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #000 !important;
-}
-
-/* =======================
-   SEARCH BAR
-======================= */
-.search-bar {
+.header-inner {
   display: flex;
   align-items: center;
-  background-color: #f8f9fa;
-  border-radius: 25px;
-  padding: 5px 12px;
-  width: 240px;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand-logo {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 28px;
+  width: auto;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
   transition: all 0.3s ease;
 }
 
-.search-bar input {
-  background: transparent;
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 14px;
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
-.search-bar:focus-within {
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+.nav-item:hover {
+  color: #000;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 6px 12px;
+  border-radius: 24px;
+  width: 280px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  margin-left: 8px;
+  font-size: 0.9rem;
 }
 
 .search-icon {
-  margin-right: 8px;
-  color: #888;
+  color: #666;
 }
 
-/* =======================
-   HEADER ICONS
-======================= */
-.header-icon {
-  cursor: pointer;
-  color: #333;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.header-icon:hover {
-  color: #000;
-  transform: scale(1.1);
-}
-
-/* =======================
-   TOGGLER
-======================= */
-.navbar-toggler {
-  background: none;
-  border: none;
-  color: #000;
-  outline: none;
-}
-.cart-badge {
-  font-size: 0.7rem;
-  padding: 4px 6px;
-  min-width: 18px;
-  min-height: 18px;
-  text-align: center;   
-  color: #fff;
-}
-
-
-/* =======================
-   COLLAPSE MENU
-======================= */
-.navbar-collapse {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  background-color: #fff;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  padding: 20px 0;
-  z-index: 999;
-  border-top: 1px solid #eee;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-}
-
-.navbar-collapse.show {
+.header-icons {
   display: flex;
-  opacity: 1;
-  transform: translateY(0);
+  align-items: center;
+  gap: 18px;
+  position: relative;
 }
 
-/* =======================
-   COLLAPSE MENU LINKS
-======================= */
-.navbar-collapse ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.navbar-collapse .nav-item {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-}
-
-.navbar-collapse .nav-link {
-  display: block;
-  width: 100%;
-  color: #555 !important;
-  text-decoration: none;
-  transition: color 0.2s ease, background 0.2s ease;
-}
-
-.navbar-collapse .nav-link:hover {
-  color: #000 !important;
-  background-color: #f7f7f7;
-}
-.navbar-brand .logo-img {
-  height: 35px;          /* adjust size */
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-}
-
-.navbar-brand .logo-img:hover {
-  transform: scale(1.05);
-}
 .cart-container {
-  position: relative; /* Ensures bubble positions relative to this */
-  display: inline-block;
-  cursor: pointer;
+  position: relative;
 }
 
-.cart-container svg {
-  font-size: 24px;
-  color: #000;
-}
-
-/* Bubble styling */
 .cart-bubble {
   position: absolute;
-  top: -8px;    
-  right: -8px;  
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 2px 6px;
+  top: -6px;
+  right: 30px;
+  background: #ff0000;
+  color: #fff;
   border-radius: 50%;
+  font-size: 0.7rem;
+  padding: 2px 5px;
   line-height: 1;
-  min-width: 18px;
-  text-align: center;
 }
 
-
-/* =======================
-   DESKTOP VIEW
-======================= */
-@media (min-width: 992px) {
-  .navbar-collapse {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: static;
-    width: auto;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    opacity: 1;
-    transform: none;
-    padding: 0;
-  }
-
-  .navbar-collapse ul {
-    flex-direction: row;
-  }
-
-  .navbar-collapse .nav-item {
-    padding: 0;
-    text-align: left;
-  }
-
-  .search-bar {
-    width: 260px;
-  }
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  display: none;
+  cursor: pointer;
 }
-@media (min-width: 992px) {
-  .navbar-expand-lg .navbar-nav {
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    margin-top: 15px;
+  }
+
+  .logo-img {
+    height: 30px;
+    width: 100px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .nav-links.open {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 35px; 
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #eee;
+    gap: 1rem;
+    padding: 1rem 0;
+    z-index: 999;
+    animation: slideDown 0.3s ease forwards;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .navbar-expand-lg .navbar-nav .nav-link {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    padding-right: var(--bs-navbar-nav-link-padding-x);
-    padding-left: var(--bs-navbar-nav-link-padding-x);
-    color: #555 !important;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  .nav-links a {
+    margin-left: 20px;
   }
 
-  .navbar-expand-lg .navbar-nav .nav-link:hover {
-    color: #000 !important;
-  }
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
 
-  .navbar .container-fluid {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 40px; 
-  }
-
-  .navbar-brand {
-    margin-right: 30px;
-  }
-
-  .search-bar {
-    margin-left: 30px;
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

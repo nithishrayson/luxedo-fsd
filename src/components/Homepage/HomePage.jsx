@@ -1,4 +1,3 @@
-import Header from "../Header/Header";
 import HeroSection from "../HeroSection/HeroSection";
 import NewArrivals from "../NewArrivals/NewArrivals";
 import TopSelling from "../TopSelling/TopSelling";
@@ -6,18 +5,14 @@ import DressStyleCard from "../DressStyleCard/DressStyleCard";
 import ReviewCarousel from "../ReviewCarousel/ReviewCarousel";
 import Footer from "../Footer/Footer";
 import BrandScroller from "../../widgets/BrandScroller/BrandScroller";
-import { CartProvider } from "../../context/CartContext";
 
 const HomePage = () => {
     return (
-        <CartProvider>
-            <div className="homepage-wrapper">
-
-                <Header />
-                <HeroSection />
-                <section className="section-wrapper my-5">
-                    <NewArrivals />
-                </section>
+        <div className="homepage-wrapper">
+            <HeroSection />
+            <section className="section-wrapper my-5">
+                <NewArrivals />
+            </section>
                 <div className="section-divider mx-auto my-4"></div>
 
                 <section className="section-wrapper my-5">
@@ -43,7 +38,6 @@ const HomePage = () => {
                 <ReviewCarousel />
                 <Footer />
             </div>
-        </CartProvider>
     );
 };
 

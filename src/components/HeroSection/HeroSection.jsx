@@ -5,7 +5,6 @@ import heroImage from "../../assets/brands/hero-model.png";
 const HeroSection = () => {
   return (
     <>
-      {/* ---------- Hero Section ---------- */}
       <section className="hero-section py-5 px-3">
         <div className="container">
           <div className="row align-items-center">
@@ -27,7 +26,6 @@ const HeroSection = () => {
                 </button>
               </div>
 
-              {/* Stats */}
               <div className="stats-row d-flex justify-content-center justify-content-lg-start gap-4 flex-wrap">
                 <div className="stat-item text-center">
                   <div className="stat-number fw-bold fs-4">200+</div>
@@ -50,7 +48,6 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Right Image */}
             <div className="col-lg-6 col-md-12 text-center">
               <img
                 src={heroImage}

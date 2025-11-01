@@ -4,7 +4,6 @@
 }
 
 .new-arrivals h2 {
-  letter-spacing: 2px;
   font-size: 2rem;
   color: #111;
 }
@@ -92,7 +91,7 @@
 }
 
 
-/* ------------------- RESPONSIVE DESIGN ------------------- */
+
 @media (max-width: 991px) {
   .product-image-container {
     height: 220px;
