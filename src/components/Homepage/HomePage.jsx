@@ -36,7 +36,6 @@ const HomePage = () => {
 
                 <div className="section-divider mx-auto my-4"></div>
                 <ReviewCarousel />
-                <Footer />
             </div>
     );
 };

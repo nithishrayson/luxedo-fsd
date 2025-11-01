@@ -34,7 +34,7 @@ const CartPage = () => {
     <div className="cart-page-wrapper">
       <div className="cart-container">
         <div className="cart-left">
-          <h2 className="cart-title">Your Shopping Cart</h2>
+          <h2 className="cart-title">YOUR SHOPPING CART</h2>
           <div className="cart-items">
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">

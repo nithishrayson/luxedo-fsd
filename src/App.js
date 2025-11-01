@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import { CartProvider } from "./context/CartContext";
 import HomePage from "./components/Homepage/HomePage";
 import CartPage from "./components/CartPage/CartPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </CartProvider>
   );

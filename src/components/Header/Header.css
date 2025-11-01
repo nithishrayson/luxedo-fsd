@@ -120,6 +120,17 @@
   .search-box {
     display: none;
   }
+  .cart-bubble {
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  background: #ff0000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  line-height: 1;
+}
 
   .nav-links.open {
     display: flex;
